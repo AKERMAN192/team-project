@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isPhoneSectionActive = false;
     let isAnimating = false;
 
-    // Time update
+    // Годиник
     function updateTime() {
         const now = new Date();
         timeDisplay.textContent = now.toLocaleTimeString('uk-UA', { 
@@ -32,7 +32,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     phoneObserver.observe(phoneSection);
 
-    // Phone scroll handler
+
+
+
+
+
+
+
+
+
+
+    
+    // Обробник прокрутки телефону
     window.addEventListener('wheel', (e) => {
         if (!isPhoneSectionActive || isAnimating) return;
 
@@ -69,6 +80,91 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ // Т
+ let touchStartY = 0;
+    
+ phoneSection.addEventListener('touchstart', (e) => {
+     touchStartY = e.touches[0].clientY;
+ });
+
+ phoneSection.addEventListener('touchmove', (e) => {
+     if (!isPhoneSectionActive || isAnimating) return;
+
+     const touchEndY = e.touches[0].clientY;
+     const deltaY = touchStartY - touchEndY;
+
+     if (Math.abs(deltaY) > 50) {
+         isAnimating = true;
+         setTimeout(() => {
+             isAnimating = false;
+         }, 800);
+
+         if (deltaY > 0 && currentSlide < newsItems.length - 1) {
+             currentSlide++;
+             showSlide(currentSlide);
+         } else if (deltaY < 0 && currentSlide > 0) {
+             currentSlide--;
+             showSlide(currentSlide);
+         }
+         touchStartY = touchEndY;
+     }
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Carousel functionality
     const carouselSection = document.querySelector('.carousel-container');
@@ -140,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Update pagination
+        // оновлення pagination
         currentNumber.textContent = String(currentCarouselSlide + 1).padStart(2, '0');
         updateProgress(currentCarouselSlide, carouselSlides.length);
     }
@@ -151,7 +247,25 @@ document.addEventListener('DOMContentLoaded', () => {
         progressLine.style.width = `${progress}%`;
     }
 
-    // Slider functionality
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Функціональність слайдера
+
+
     const slider = document.querySelector('.slider');
     let isSliderVisible = false;
     let scrollPosition = 0;
@@ -183,37 +297,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     }
 
-    // Touch events for phone section
-    let touchStartY = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-    phoneSection.addEventListener('touchstart', (e) => {
-        touchStartY = e.touches[0].clientY;
-    });
 
-    phoneSection.addEventListener('touchmove', (e) => {
-        if (!isPhoneSectionActive || isAnimating) return;
 
-        const touchEndY = e.touches[0].clientY;
-        const deltaY = touchStartY - touchEndY;
-
-        if (Math.abs(deltaY) > 50) {
-            isAnimating = true;
-            setTimeout(() => {
-                isAnimating = false;
-            }, 800);
-
-            if (deltaY > 0 && currentSlide < newsItems.length - 1) {
-                currentSlide++;
-                showSlide(currentSlide);
-            } else if (deltaY < 0 && currentSlide > 0) {
-                currentSlide--;
-                showSlide(currentSlide);
-            }
-            touchStartY = touchEndY;
-        }
-    });
-
-    // Touch events for carousel
+    // карулсель
     let touchStartX = 0;
     
     carouselSection.addEventListener('touchstart', (e) => {
@@ -244,7 +353,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// News API functionality
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// News API 
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
 const resultsContainer = document.getElementById('resultsContainer');
@@ -310,7 +438,13 @@ scrollArrow.addEventListener('click', () => {
 
 
 
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
 
+mobileMenuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  mobileMenuBtn.classList.toggle('active');
+});
 
 
 

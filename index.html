@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Rouge on Blue</title>
+    <title>Neuron over Code</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,6 +13,11 @@
 <body>
     <header class="header">
         <nav class="nav">
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="logo"> <a href="">Neuron over Code</a> </div>
             <ul class="nav-links">
                 <li>
@@ -24,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#about">
+                    <a href="https://yarik-bb.github.io/slider/">
                         About
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227 87">
                             <path fill="none" stroke="#fff" stroke-miterlimit="20" d="M105.18 10.88c-28.533 3.002-59.034 11.005-82.648 28.017-9.837 7.004-18.692 19.01-5.903 27.017 7.872 6.003 18.695 7.003 28.534 9.005 14.758 2 30.5 2 46.242 1 31.484-1 64.937-6.004 94.453-17.012 8.856-3.001 37.388-14.006 29.517-29.015-7.87-13.008-36.446-11.968-49.194-13.008-43.702-3.562-81.094 6.25-106.425 14.838"></path>
@@ -44,7 +49,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="video-background">
                 <video autoplay muted loop playsinline>
                     <source src="./img/ai-video.mp4" type="video/mp4">
@@ -54,19 +59,13 @@
                 <h1>Welcome to Neuron over Code</h1>
                 <p>Here you will learn everything about artificial intelligence.</p>
             </div>
+            <div class="scroll-arrow">
+                <span class="scroll-text">Scroll Down</span>
+                <div class="arrow"></div>
+            </div>
         </section>
 
-
-        <div class="scroll-arrow">
-            <span class="scroll-text">Scroll Down</span>
-            <div class="arrow"></div>
-        </div>
-        
-
-
-
-
-        <section class="phone-section">
+        <section class="phone-section" id="about">
             <div class="scrolling-text">
                 <div class="text-content">
                     <h2>ARTIFICIAL INTELLIGENCE NEWS</h2>
@@ -84,13 +83,6 @@
                             <span class="battery">🔋</span>
                         </div>
                     </div>
-
-
-
-
-
-
-
                     <div class="news-scroll">
                         <div class="news-item" style="background-image: url('./img/ai.jpg')">
                             <h3>Штучний інтелект перемагає чемпіона світу з шахів</h3>
@@ -113,24 +105,17 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
         <section class="content-spacer">
             <div class="container">
-                <h2>Latest Insights in AI</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>Останні Досягнення в AI</h2>
+                <p>Штучний інтелект продовжує швидко розвиватися, відкриваючи нові можливості в різних сферах. Ось деякі з найцікавіших інновацій у сфері AI:
+                    🤖 Генеративний AI – нові моделі, такі як GPT-4 та DALL·E, дозволяють створювати тексти, зображення та навіть відео з високою точністю.
+                    🚀 Автоматизація коду – AI-асистенти, такі як GitHub Copilot, допомагають розробникам швидше писати код і виправляти помилки.</p>
+                <p>🎨 AI у дизайні – сучасні нейромережі генерують унікальні макети та графіку, що прискорює процес створення вебсайтів.
+                    🔍 Розширені алгоритми SEO – AI аналізує дані користувачів, допомагаючи сайтам краще ранжуватися в пошукових системах.
+                    🌐 Персоналізація контенту – штучний інтелект адаптує сайти та платформи під інтереси кожного користувача, покращуючи UX.</p>
             </div>
         </section>
-
-
-
-
 
         <div class="carousel-container">
             <div class="carousel">
@@ -166,47 +151,37 @@
             </div>
         </div>
 
-
-
         <section class="slider-section">
             <div class="slider-container">
                 <div class="slider-text">
-                    <h2>ІНФОРМАЦІЮ ЗАПОВНЮ ПОТІМ</h2>
+                    <h2>Використання Штучного Інтелекту у Веброзробці</h2>
                     <p>Discover our innovative AI solutions</p>
                 </div>
                 <div class="slider">
                     <div class="slide">
                         <img src="./img/code-1076536_1280.jpg" alt="Project 1">
                         <div class="slide-content">
-                            <h3>AI Vision</h3>
-                            <p>Computer vision solutions</p>
+                            <h3>✅ Генерація коду</h3>
+                            <p>ШІ-інструменти допомагають програмістам швидко створювати та оптимізувати код.</p>
                         </div>
                     </div>
                     <div class="slide">
                         <img src="./img/computer-8779040_1280.jpg" alt="Project 2">
                         <div class="slide-content">
-                            <h3>Neural Networks</h3>
-                            <p>Deep learning applications</p>
+                            <h3>✅ Адаптивний дизайн</h3>
+                            <p>AI аналізує поведінку користувачів та покращує UX/UI.</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/img/source-4280758_1280.jpg" alt="Project 3">
+                        <img src="./img/source-4280758_1280.jpg" alt="Project 3">
                         <div class="slide-content">
-                            <h3>Machine Learning</h3>
-                            <p>Predictive analytics</p>
+                            <h3>✅ Оптимізація SEO</h3>
+                            <p>AI-алгоритми покращують видимість сайту в пошукових системах.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
 
         <section class="search-section">
             <div class="search-container">
@@ -219,72 +194,34 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-        <section class="services">
-            <h2>Our Services</h2>
+        <section class="services" id="services">
+            <h2>Наші Послуги</h2>
             <div class="services-grid">
                 <a href="/service1.html" class="service-card">
-                    <img src="./img/3d.jpg" alt="Service 1">
+                    <img src="./img/new 3d.webp" alt="Service 1">
                     <div class="service-content">
-                        <h3>AI Development</h3>
-                        <p>Custom AI solutions for your business</p>
+                        <h3>🚀 Інтерактивні 3D-елементи</h3>
+                        <p>Створюємо динамічні 3D-форми та візуалізації для вашого сайту.</p>
                     </div>
                 </a>
                 <a href="/service2.html" class="service-card">
-                    <img src="./img/3dai.jpg" alt="Service 2">
+                    <img src="./img/new3d2.webp" alt="Service 2">
                     <div class="service-content">
-                        <h3>Machine Learning</h3>
-                        <p>Advanced ML algorithms and models</p>
+                        <h3>🎨 UI/UX дизайн</h3>
+                        <p>Інтеграція 3D-анімації та сучасних технологій.</p>
                     </div>
                 </a>
                 <a href="/service3.html" class="service-card">
-                    <img src="./img/ai3d.jpg" alt="Service 3">
+                    <img src="./img/new3d1.webp" alt="Service 3">
                     <div class="service-content">
-                        <h3>Data Analytics</h3>
-                        <p>Comprehensive data analysis solutions</p>
+                        <h3>💡 Інноваційні вебдодатки</h3>
+                        <p>Впроваджуємо AR та 3D-конфігуратори.</p>
                     </div>
                 </a>
             </div>
         </section>
-
-
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-top">
@@ -295,7 +232,7 @@
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#">About</a></li>
+                            <li><a href="#about">About</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Press</a></li>
                         </ul>
@@ -303,7 +240,7 @@
                     <div class="footer-column">
                         <h4>Technology</h4>
                         <ul>
-                            <li><a href="#">AI Solutions</a></li>
+                            <li><a href="#services">AI Solutions</a></li>
                             <li><a href="#">Research</a></li>
                             <li><a href="#">Innovation</a></li>
                         </ul>
@@ -312,14 +249,14 @@
                         <h4>Connect</h4>
                         <ul>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
+                            <li><a href="https://web.telegram.org/k/">Telegram</a></li>
+                            <li><a href="https://www.instagram.com/a.k.e.r.m.a.n1337/">Instagram</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Neuron over Code</p>
+                <p>&copy; 2025 Neuron over Code</p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Use</a>
@@ -328,50 +265,7 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-    
-
     <script src="./script.js"></script>
 </body>
 </html>
+
